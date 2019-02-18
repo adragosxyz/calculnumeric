@@ -50,4 +50,17 @@ xlabel('abcisa x')
 ylabel('ordonata y')
 hold on
 plot(x,z, '.-g', 'Linewidth',3)
+text(3.3,0,'sin(x)','Edgecolor','r')
+text(4.9,0,'cos(x)','Edgecolor','g')
 hold off
+subplot(2,2,1)
+plot(x,y, 'r','Linewidth',3)
+subplot(2,2,2)
+plot(x,z, '.-g', 'Linewidth',3)
+subplot(2,2,3)
+xp = -2:0.1:2
+p1 = xp.^2 + 2
+p2 = xp.^3 - 2*xp.^2
+plot(xp, p1, 'b','Linewidth',3)
+subplot(2,2,4)
+plot(xp, p2, 'k','Linewidth',3)
