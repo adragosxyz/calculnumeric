@@ -36,13 +36,13 @@ C.^3
 % a = amin:pas:amax
 % b = linspace(amin,amax,N)
 % pas = (amax-amin)/(N-1)
-a = 1:2:10
+a = 1:2:10;
 % format SHORT
-b = linspace(1,10,5)
+b = linspace(1,10,5);
 %% Grafice de functii
-x = linspace(0,2*pi,100)
-y = sin(x)
-z = cos(x)
+x = linspace(0,2*pi,100);
+y = sin(x);
+z = cos(x);
 plot(x,y, 'r','Linewidth',3)
 grid on
 title('Functiile sin(x), cos(x)')
@@ -58,9 +58,65 @@ plot(x,y, 'r','Linewidth',3)
 subplot(2,2,2)
 plot(x,z, '.-g', 'Linewidth',3)
 subplot(2,2,3)
-xp = -2:0.1:2
-p1 = xp.^2 + 2
-p2 = xp.^3 - 2*xp.^2
+xp = -2:0.1:2;
+p1 = xp.^2 + 2;
+p2 = xp.^3 - 2*xp.^2;
 plot(xp, p1, 'b','Linewidth',3)
 subplot(2,2,4)
 plot(xp, p2, 'k','Linewidth',3)
+%% Elemente de programare
+% for sir_numere
+%   corp_instructiuni
+% end
+s=0;
+for i = 1:10
+    s = s+i;
+end
+disp(s);
+x = [];
+for i = 1:10
+   x(i) = i^2;
+end
+disp(x);
+%aij = i+j+3 i,j=1...3
+A = [];
+for i = 1:3
+    for j = 1:3
+        A(i,j) = i+j+3;
+    end
+end
+disp(A);
+% while conditie
+%   corp_instructiuni
+% end
+% suma nr de la 1 la 10
+s = 0;
+i = 10;
+while i>=1
+    s=s+i;
+    i=i-1;
+end
+disp(s)
+% if conditie1
+%   corp_instructiuni1
+% elseif conditie2
+%   corp_instructiuni2
+% else 
+%   corp_instructiunin
+% end
+% [-5,5]
+y = [];
+x = linspace(-5,5,1000);
+for i = 1:length(x)
+    if x(i) < 0 && x(i) > -2
+        y(i) = x(i)^2;
+    elseif x(i) >= 0 && x(i) < 3
+        y(i) = x(i)^3;
+    elseif x(i) >=3 && x(i) < 4
+        y(i) = x(i)^2 + 18;
+    else 
+        y(i) = 0;
+    end
+end
+plot(x,y, '.r', 'MarkerSize', 10)
+grid on 
