@@ -1,0 +1,24 @@
+clear all
+%%Matrici si vectori
+%% Vectori
+A = [1;2;3]
+B = [2;4;5]
+dot(A,B)
+transpose(A)*B
+A'*B
+sum(A)
+
+[maxB,indicemax] = max(B)
+
+%% Matrici
+C = [1 2 3; 4 5 7; 2 8 9]
+A'*C
+D = [2 4 5; 1 3 4; 2 1 0]
+C*D
+D*C
+C^3
+inv(C)
+C(1,2)
+
+%%
+A = [1;2;3]
