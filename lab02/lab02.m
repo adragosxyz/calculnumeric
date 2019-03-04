@@ -52,3 +52,15 @@ grid on;
 plot(r1, f(r1), 'o', 'MarkerFaceColor', 'g', 'Markersize', 10);
 plot(r2, f(r2), 'o', 'MarkerFaceColor', 'g', 'Markersize', 10);
 plot(r3, f(r3), 'o', 'MarkerFaceColor', 'g', 'Markersize', 10);
+
+A = [0 1 1
+    2 1 5
+    4 2 1];
+b = [3; 5; 1;];
+x = inv(A)*b;
+
+A = [1 2 3
+    0 4 5
+    0 0 6];
+b = [8;14;12];
+x = SubsDesc(A,b)
