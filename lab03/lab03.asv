@@ -13,13 +13,38 @@ if A*x==b
     x
 end
 
+%RezolvaLU
 [L, U, w] = FactLU(A);
-b = b;
+bp = b;
 lenw = length(w);
 for i=1:lenw
-    b(i) = b(w(i));
+    bp([i w(i)]) = bp([w(i) i]);
+end
+
+L
+U
+
+y = SubsAsc(L,bp);
+x = SubsDesc(U,y);
+x
+
+%% Problema 5
+clear all;
+
+A = [1 2 -1
+     2 4 7
+     -1 2 5];
+b = [2;13;10];
+
+[L, U, w] = FactLU(A);
+bp = b;
+lenw = length(w);
+for i=1:lenw
+    bp([i w(i)]) = bp([w(i) i]);
 end
 
 y = SubsAsc(L,bp);
 x = SubsDesc(U,y);
 x
+
+[
