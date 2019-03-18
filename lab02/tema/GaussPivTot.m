@@ -35,7 +35,7 @@ function [x] = GaussPivTot(A,b)
   end
   x_tmp = SubsDesc(A(:,1:n),A(:,n+1));
   for i=1:n
-      x(i) = x_tmp(index(i));
+      x(index(i)) = x_tmp(i);
   end
   x = x';
 end
