@@ -1,17 +1,11 @@
-function [x] = GaussPivPart(A,b)
+function [x] = GaussFaraPiv(A,b)
   n = length(b);
   A = [A b];
   for k=1:n-1
-      apk = 0;
-      for j=k:n
-          if abs(A(j,k))>apk
-              apk = abs(A(j,k));
-              p = j;
+      for p=k:n
+          if A(p,k)~=0
+              break
           end
-      end
-      if A(n,n)==0
-        disp 'Sistem incompatibil sau sistem compatibil nedeterminat';
-        return;
       end
       if p~=k
           A([p k],:) = A([k p],:);
@@ -21,7 +15,6 @@ function [x] = GaussPivPart(A,b)
           A(l,:) = A(l,:) - mlk*A(k,:);
       end
   end
-  A
   if A(n,n)==0
       disp 'Sistem incompatibil sau sistem compatibil nedeterminat';
       return;

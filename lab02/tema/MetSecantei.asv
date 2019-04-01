@@ -1,9 +1,0 @@
-function [x_aprox] = MetSecantei(f,a,b,x0,x1,eps)
-  x(1) = x0;
-  x(2) = x1;
-  k = 2;
-  while abs(x(k)-x(k-1))/abs(x(k-1)) >= eps
-      k = k+1;
-      x(k)
-  end
-end

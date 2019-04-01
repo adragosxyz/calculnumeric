@@ -1,0 +1,13 @@
+function [L] = FactCholesky2(A)
+  n = size(A,2);
+  if n==1
+      L = A;
+  else
+      a = A(1,1);
+      if a<=0
+        disp('A nu admite factorizarea Cholesky')
+        return
+      end
+  end
+  
+end
