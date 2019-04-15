@@ -2,6 +2,8 @@ function [L, U, w] = FactLU(A)
   n = size(A, 1);
   L = eye(n);
   for k=1:n-1
+     A
+     L
      p=k;
      max = abs(A(p,k));
      for i=k:n
@@ -26,6 +28,8 @@ function [L, U, w] = FactLU(A)
          L([p k], 1:k-1) = L([k p], 1:k-1);
      end
   end
+  A
+  L
   if A(n,n)==0
       disp 'Sistem incompatibil';
       return;

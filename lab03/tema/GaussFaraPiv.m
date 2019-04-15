@@ -15,6 +15,7 @@ function [x] = GaussFaraPiv(A,b)
           A(l,:) = A(l,:) - mlk*A(k,:);
       end
   end
+  A
   if A(n,n)==0
       disp 'Sistem incompatibil sau sistem compatibil nedeterminat';
       return;

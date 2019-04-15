@@ -95,7 +95,9 @@ for i=1:lenw
     bp([i w(i)]) = bp([w(i) i]);
 end
 
+bp
 y = SubsAsc(L,bp);
+y
 x = SubsDesc(U,y);
 x
 
