@@ -1,0 +1,13 @@
+function [y, z] = Hermite(X, Y, Z, x)
+  n = length(X)-1;
+  Her = 0;
+  for k=1:n+1
+      Lpk = 1;
+      L = 1;
+      for i=1:n
+        if i~=k
+          L = 
+          Lpk = Lpk/(X(k)-X(i)); 
+        end
+  end
+end
