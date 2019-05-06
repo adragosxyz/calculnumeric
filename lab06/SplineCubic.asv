@@ -1,0 +1,30 @@
+%Ij = [xj, xj+1) j=1,n-1
+%in = [xn, xn+1]
+%Sj(x) = 
+function [y,z,t] = SplineCubic(X,Y,x,fpa,fpb)
+  n = length(X)-1;
+  for j=1:n
+      a(j) = Y(j);
+  end
+  B(1,1) = 1;
+  B(n+1,n+1) = 1;
+  for j=2:n
+      B(j,j) = 4;
+      B(j,j-1) = 1;
+      B(j,j+1) = 1;
+  end
+  w(1) = fpa;
+  w(n+1) = fpb;
+  h = X(2)-X(1);
+  for j=2:n
+      w(j) = 3*(Y(j+1)-Y(j-1))/h;
+  end
+  b = B\w;
+  for j=1:n
+      d(j) = -2*(Y(j+1)-Y(j))/(h*h*h) + (b(j+1)-b(j))/(h*h);
+      c(j) = 3*(Y(j+1)-Y(j))/(h*h) - (b(j+1)+2*b(j))/h;
+  end
+  for j=1:n
+      if x
+  end
+end

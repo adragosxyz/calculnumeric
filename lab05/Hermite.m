@@ -1,6 +1,7 @@
 function [y, z] = Hermite(X, Y, Z, x)
   n = length(X)-1;
   Her = 0;
+  Herp=0;
   for k=1:n+1
       Lpk = zeros(size(x));
       L = ones(size(x));
@@ -10,9 +11,7 @@ function [y, z] = Hermite(X, Y, Z, x)
           Lpk = Lpk + 1./(X(k)-X(i)); 
         end
       end
-      H = L.*L.*(1-2.*Lpk.*(x-X(k)));
-      K = L.*L.*(x-X(k));
-      Her = Her + H.*Y(k) + K.*Z(k);
+    c
   end
   y = Her;
   z = [];
