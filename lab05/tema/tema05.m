@@ -116,4 +116,3 @@ grid on;
 plot(x, abs(f(x)-y),'g','LineWidth',3);
 title('Eroarea f(x)-MetHermiteDD');
 [y,z] = MetHermiteDD(X,Y,Z,pi/2);
-1
