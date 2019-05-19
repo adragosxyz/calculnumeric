@@ -1,4 +1,4 @@
-%% Tema lab04
+%% Tema lab06
 
 %% Interpolarea Spline Liniara
 % <include>SplineL</include>
